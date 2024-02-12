@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict"
+        // let a = 56;
+        function ichigo() {
+            console.log("hello ichigo!");
+        }
+        // let obj =
+        //    {
+        //     a : 1,
+        //     b : 2,
+        //     c : 3,
+        //     func : function obj_func(number){
+        //           console.log("this is number:- ", this)
+        //     }
+        // }
+        // console.log(obj)
+        document.addEventListener("click", function click() {
+            console.log("its been clicked!")
+            alert("hello!")
+            prompt("are you 18+?", "prove here")
+            confirm("are you sure?", "state here!")
+        })
+
+        let arr = [3, 5, 6, 8];
+        console.log(this) // returns window object
+        function obj_func(number) {
+            console.log("this is number:- ", this) // returns undefined //normal function will have everything of it's own(no connection to others, this!=this)
+        }
+        obj_func()
+        let obj2 = {
+            a: this,
+            myfunc: (number) => {
+                console.log('the number is', this); // arrow function will have and share the intial shared value.(a : this)
+            }
+        }
+        obj2.myfunc();
+        // console.log(obj2.a)
+
+        setTimeout(() => {
+            console.log("here i am!")
+        }, 3000);
+
+        const age = 19;
+        const beverage = age >= 21 ? "Beer" : "Juice";
+        console.log(beverage); // "Beer"
+    </script>
+</head>
+
+<body>
+    <p style="display: flex; color: blue; border: 2px solid black;">this is a demo!</p>
+</body>
+
+</html>
