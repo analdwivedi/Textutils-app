@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/jsrevise
 /.pnp
 .pnp.js
 
