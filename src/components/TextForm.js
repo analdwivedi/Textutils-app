@@ -3,10 +3,8 @@ import { useState } from 'react'
 
 export default function TextForm(props) {
     const onUpClick = () => {
-        // console.log('uppercase was clicked!', text);
         let changeToUpper = text.toUpperCase();
         setText(changeToUpper);
-        // console.log('email area was clicked!', email);
         props.showAlert("Converted to uppercase!", "success");
         props.show_Alert("Converted to uppercase!", "danger");
     }
@@ -29,24 +27,20 @@ export default function TextForm(props) {
         props.show_Alert("Everything is checked!", "danger");
     }
     const onCheckSpace = () => {
-        let spaceAll = text.split(/[ ]+/); //regex type
+        let spaceAll = text.split(/[ ]+/); 
         setText(spaceAll.join(" "));
         props.showAlert("Everything is spaced well!", "success");
         props.show_Alert("Everything is spaced well!", "danger");
     }
     const handleTextOnChange = (event) => {
-        // console.log('handled on change');
         setText(event.target.value);
     }
     const handleEmailOnChange = (event) => {
-        // console.log('handled on change again');
         setEmail(event.target.value);
     }
-    // useState hook:- helps us to create and use state like below:-
     const [text, setText] = useState("");
     const [email, setEmail] = useState("");
-    // text = "new text"; //wrong way to update text.
-    // setText("new text"); //correct way to update text or update state.
+
     return (
         <>
             <div className='container' style={props.mode} >

@@ -5,36 +5,6 @@ export default function About(props) {
             color : props.mode === 'light' ? 'dark' : 'light',
             backgroundColor : props.mode === 'dark' ? 'light' : 'dark',
        }
-    // const { myStyle, newStyle } = useState({
-    //     color: 'black',
-    //     backgroundColor: 'white',
-    //     border: '2px solid black'
-    // })
-    // const { btnText, setBtnText } = useState("Enable Dark Mode")
-
-    // const darkStyle = () => {
-    //     if (myStyle.color === 'black') {
-    //         newStyle({
-    //             color: 'white',
-    //             backgroundColor: 'black',
-    //             border: '2px solid white'
-    //         })
-    //         setBtnText('Enable Light Mode')
-    //     }
-    //     else {
-    //         newStyle({
-    //             color: 'black',
-    //             backgroundColor: 'white',
-    //             border: '2px solid black'
-    //         })
-    //         setBtnText('Enable Dark Mode')
-    //     }
-    // }
-    // internal css in js or react:-
-    // let myStyle = {
-    //     color : 'white',
-    //     backgroundColor : 'black',
-    // }
 
     return (
         <>
